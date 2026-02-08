@@ -1,6 +1,7 @@
 [package]
-name = "clip_hist"
+name = "clip-hist"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+eframe = "0.33.3"
