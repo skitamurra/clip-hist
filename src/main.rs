@@ -8,7 +8,7 @@ fn main() -> eframe::Result {
     eframe::run_native(
         "clip-hist",
         options,
-        Box::new(|_cc| Ok(Box::new(MyApp::new()))),
+        Box::new(|_cc| Ok(Box::new(MyApp::new(_cc)))),
     )
 }
 
@@ -17,7 +17,7 @@ struct MyApp {
 }
 
 impl MyApp {
-    fn new() -> Self {
+    fn new(_cc: &eframe::CreationContext<'_>) -> Self {
         Self {
             history: vec!["hoge".to_string(), "huge".to_string()],
         }
