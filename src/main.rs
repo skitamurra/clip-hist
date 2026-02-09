@@ -1,3 +1,6 @@
+mod app;
+
+use app::ClipHist;
 use eframe::egui;
 
 fn main() -> eframe::Result {
@@ -6,31 +9,8 @@ fn main() -> eframe::Result {
         ..Default::default()
     };
     eframe::run_native(
-        "clip-hist",
+        "clipHist",
         options,
-        Box::new(|_cc| Ok(Box::new(MyApp::new(_cc)))),
+        Box::new(|_cc| Ok(Box::new(ClipHist::new(_cc)))),
     )
-}
-
-struct MyApp {
-    history: Vec<String>,
-}
-
-impl MyApp {
-    fn new(_cc: &eframe::CreationContext<'_>) -> Self {
-        Self {
-            history: vec!["hoge".to_string(), "huge".to_string()],
-        }
-    }
-}
-
-impl eframe::App for MyApp {
-    fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
-        egui::CentralPanel::default().show(ctx, |ui| {
-            ui.heading("clip-hist");
-            for text in &self.history {
-                ui.label(text);
-            }
-        });
-    }
 }
