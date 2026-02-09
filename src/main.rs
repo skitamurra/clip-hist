@@ -29,7 +29,7 @@ impl eframe::App for MyApp {
         egui::CentralPanel::default().show(ctx, |ui| {
             ui.heading("clip-hist");
             for text in &self.history {
-                ui.horizontal(|ui| ui.label(text));
+                ui.label(text);
             }
         });
     }
