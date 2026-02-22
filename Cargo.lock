@@ -587,13 +587,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "clip-hist"
-version = "0.1.0"
-dependencies = [
- "eframe",
-]
-
-[[package]]
 name = "clipboard-win"
 version = "5.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1155,6 +1148,13 @@ dependencies = [
  "pin-project-lite",
  "pin-utils",
  "slab",
+]
+
+[[package]]
+name = "fuzz-clip"
+version = "0.1.0"
+dependencies = [
+ "eframe",
 ]
 
 [[package]]

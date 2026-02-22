@@ -1,6 +1,6 @@
 mod app;
 
-use app::ClipHist;
+use app::FuzzClip;
 use eframe::egui;
 
 fn main() -> eframe::Result {
@@ -9,8 +9,8 @@ fn main() -> eframe::Result {
         ..Default::default()
     };
     eframe::run_native(
-        "clipHist",
+        "Fuzz Clip",
         options,
-        Box::new(|_cc| Ok(Box::new(ClipHist::new(_cc)))),
+        Box::new(|_cc| Ok(Box::new(FuzzClip::new(_cc)))),
     )
 }
